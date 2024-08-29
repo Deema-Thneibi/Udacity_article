@@ -1,8 +1,8 @@
 // Variables
-$primary-color: #1b426b; // Updated to a vibrant blue
-$secondary-color: #F8F9FA; // Light gray background
-$accent-color: #6C757D; // Subtle gray for accents
-$text-color: #343A40; // Darker gray for text
+$primary-color: #1b426b; 
+$secondary-color: #F8F9FA; 
+$accent-color: #6C757D; 
+$text-color: #343A40; 
 $font-family: 'Roboto, sans-serif';
 $padding: 1rem;
 $border-radius: 8px;
@@ -17,25 +17,7 @@ body {
     background-color: $secondary-color;
 }
 
-// Header Styles
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $primary-color;
-    padding: $padding;
-    color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    .logo {
-        font-size: 1.75rem;
-        font-weight: bold;
-    }
-
-    .navigation {
-        font-size: 1.25rem;
-    }
-}
 
 // Main Content Styles
 main {
@@ -108,14 +90,23 @@ main {
     }
 }
 
-// Footer Styles
-footer {
-    text-align: center;
-    padding: $padding;
-    background-color: $primary-color;
+
+#error{
+    background-color: brown;
+    border-radius: 10px;
+    padding: 20px 10px;
     color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    text-transform: capitalize;
+}
+
+.result strong{
+    color: green;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 100px;
+}
+.result span{
+    font-weight: bold;
+    color: #1b426b;
+    font-size: 17px;
 }

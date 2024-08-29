@@ -1,56 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Test</title>
-    <script defer src="main.js"></script></head>
-
-    <body>
-
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
-
-        <main>
-            <div class="container">
-                <p>Enter a URL of an article / a blog to discover its sentiment</p>
-                <section>
-                    <form id="form">
-                        <label for="article-url">URL</label>
-                        <input id="article-url" type="text" name="input" value=" " placeholder="Enter URL" required>
-                        <button class="btn-submit" type="submit">Submit</button>
-                    </form>
-                </section>
-
-                <section>
-                    <strong>Form Results:</strong>
-                    <div id="text"></div>
-                    <div id="agreement"></div>
-                    <div id="subiectivity"></div>
-                    <div id="confidence"></div>
-                    <div id="irony"></div>
-                    <div id="score_tag"></div>
-                </section>
-            </div>
-        </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
-
-        <script>
-            // Check that service workers are supported
+<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"><title>Test</title><script defer="defer" src="bundle.js"></script><link href="style.e2912fc38958fae88cd7.css" rel="stylesheet"></head><body><header><div class="">Logo</div><div class="">navigation</div></header><main><div class="container"><p>Enter a URL of an article / a blog to discover its sentiment</p><section><form id="form" onsubmit="return Client.handleSubmit(event)"><label for="article-url">URL</label> <input id="article-url" name="input" value=" " placeholder="Enter URL" required> <button class="btn-submit" type="submit">Submit</button></form></section><section class="error"></section><section class="result"><strong>Form Results:</strong><div id="text"></div><div id="agreement"></div><div id="subjectivity"></div><div id="confidence"></div><div id="irony"></div><div id="score_tag"></div></section></div></main><footer><p>This is a footer</p></footer><script>// Check that service workers are supported
             // if ('serviceWorker' in navigator) {
             //     // Use the window load event to keep the page load performant
             //     window.addEventListener('load', () => {
             //         navigator.serviceWorker.register('/service-worker.js');
             //     });
-            // }
-        </script>
-    </body>
-</html>
+            // }</script></body></html>

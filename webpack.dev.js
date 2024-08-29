@@ -1,15 +1,22 @@
-const webpack = require('webpack'),
-path = require('path'),
- HtmlWebpackPlugin = require('html-webpack-plugin'),
- { 
-    CleanWebpackPlugin
- } = require('clean-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
+ const HtmlWebpackPlugin = require('html-webpack-plugin');
+ const { CleanWebpackPlugin} = require('clean-webpack-plugin');
+ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+
 
 
 module.exports = {
     entry: "./src/client/index.js",
     mode: "development",
-    devtool: 'source-map',
+    devtool: 'hidden-source-map',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        libraryTarget: 'var',
+        library: 'Client',
+        clean: true,
+    },
     module: {
         rules: [
             {
@@ -37,4 +44,12 @@ module.exports = {
         cleanStaleWebpackAssets: true,
         protectWebpackAssets: false
 })],
+
+optimization: {
+    minimizer: [
+        new CssMinimizerPlugin(),
+    ],
+    minimize: true,
+},
+
 }
